@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "CommonJS",
+      "moduleResolution": "Node", 
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "strict": true,
+      "esModuleInterop": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
+  
+  //choosing nodeNxt above helps in using import instead of require for both internal and external modules 
+//this config asssumes in include that my source files are in src directory , so create one  /
+// In TypeScript, the choice between import and require depends on the module system specified in your tsconfig.json file. The two main module systems are CommonJS and ECMAScript (ES) modules.
+//If your TypeScript project is configured with "module": "commonjs" in tsconfig.json, you should use import for external modules, but you might still encounter situations where require is used:
+//If your TypeScript project is configured with "module": "es6" (or "module": "esnext" or "nodeNext") in tsconfig.json, you should use import for all module imports, both external and internal:
